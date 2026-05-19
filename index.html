@@ -1,0 +1,301 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rafael IA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#f7f7f5;
+      color:#1f2937;
+      line-height:1.7;
+    }
+
+    header{
+      background:#ff8c42;
+      color:white;
+      padding:32px 20px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    header h1{
+      font-size:32px;
+      font-weight:700;
+    }
+
+    header p{
+      margin-top:8px;
+      opacity:0.95;
+    }
+
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      padding:20px;
+    }
+
+    nav button{
+      border:none;
+      background:white;
+      padding:12px 18px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.2s;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    nav button:hover{
+      transform:translateY(-2px);
+    }
+
+    nav button.active{
+      background:#ff8c42;
+      color:white;
+    }
+
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      padding:20px;
+    }
+
+    .card{
+      display:none;
+      background:white;
+      padding:32px;
+      border-radius:20px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.05);
+      animation:fade .2s ease;
+    }
+
+    .card.active{
+      display:block;
+    }
+
+    h2{
+      margin-bottom:20px;
+      color:#111827;
+    }
+
+    h3{
+      margin-top:24px;
+      margin-bottom:10px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    a{
+      color:#ff8c42;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#6b7280;
+      font-size:14px;
+    }
+
+    @keyframes fade{
+      from{
+        opacity:0;
+        transform:translateY(5px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:600px){
+      header h1{
+        font-size:26px;
+      }
+
+      .card{
+        padding:24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Rafael IA</h1>
+  <p>Seu especialista em construção civil no bolso.</p>
+</header>
+
+<nav>
+  <button class="tab active" data-tab="privacy">Política de Privacidade</button>
+  <button class="tab" data-tab="terms">Termos de Uso</button>
+  <button class="tab" data-tab="delete">Exclusão de Conta</button>
+</nav>
+
+<div class="container">
+
+  <section id="privacy" class="card active">
+    <h2>Política de Privacidade</h2>
+
+    <p>
+      O Rafael IA respeita a privacidade dos usuários e está comprometido em proteger seus dados.
+    </p>
+
+    <h3>Dados coletados</h3>
+    <ul>
+      <li>Nome e e-mail da conta Google utilizada no login</li>
+      <li>Dados básicos de uso do aplicativo</li>
+      <li>Informações técnicas e diagnósticos de falhas</li>
+    </ul>
+
+    <h3>Como os dados são utilizados</h3>
+    <ul>
+      <li>Melhorar a experiência do aplicativo</li>
+      <li>Autenticação de usuários</li>
+      <li>Funcionamento da inteligência artificial</li>
+      <li>Estabilidade e segurança da plataforma</li>
+    </ul>
+
+    <h3>Serviços utilizados</h3>
+    <ul>
+      <li>Firebase Authentication</li>
+      <li>Firebase Analytics</li>
+      <li>Firebase Crashlytics</li>
+      <li>Google AdMob</li>
+      <li>OpenAI API</li>
+    </ul>
+
+    <h3>Compartilhamento de dados</h3>
+    <p>
+      O Rafael IA não vende informações pessoais dos usuários.
+    </p>
+
+    <h3>Contato</h3>
+    <p>
+      E-mail: <a href="mailto:alexandrecappa12@gmail.com">alexandrecappa12@gmail.com</a>
+    </p>
+
+  </section>
+
+  <section id="terms" class="card">
+    <h2>Termos de Uso</h2>
+
+    <p>
+      Ao utilizar o Rafael IA, você concorda com os seguintes termos:
+    </p>
+
+    <h3>Uso do aplicativo</h3>
+    <ul>
+      <li>O aplicativo deve ser utilizado apenas para fins legais.</li>
+      <li>As respostas geradas pela IA possuem caráter informativo.</li>
+      <li>O usuário é responsável pela utilização das informações fornecidas.</li>
+    </ul>
+
+    <h3>Limitação de responsabilidade</h3>
+    <p>
+      O Rafael IA não substitui engenheiros, arquitetos ou profissionais técnicos responsáveis pela execução de obras.
+    </p>
+
+    <h3>Conteúdo gerado por IA</h3>
+    <p>
+      As respostas são geradas automaticamente por inteligência artificial e podem conter imprecisões.
+    </p>
+
+    <h3>Modificações</h3>
+    <p>
+      Estes termos podem ser atualizados a qualquer momento sem aviso prévio.
+    </p>
+
+    <h3>Contato</h3>
+    <p>
+      E-mail: <a href="mailto:alexandrecappa12@gmail.com">alexandrecappa12@gmail.com</a>
+    </p>
+
+  </section>
+
+  <section id="delete" class="card">
+    <h2>Exclusão de Conta</h2>
+
+    <p>
+      Os usuários do Rafael IA podem solicitar a exclusão de sua conta e dados associados a qualquer momento.
+    </p>
+
+    <h3>Como solicitar</h3>
+    <ol style="padding-left:20px;">
+      <li>Envie um e-mail para:</li>
+      <p style="margin:10px 0;">
+        <a href="mailto:alexandrecappa12@gmail.com">
+          alexandrecappa12@gmail.com
+        </a>
+      </p>
+
+      <li>Utilize o assunto:</li>
+      <p style="margin:10px 0;">
+        <strong>Excluir conta Rafael IA</strong>
+      </p>
+
+      <li>Informe o e-mail utilizado no login Google.</li>
+    </ol>
+
+    <h3>Prazo</h3>
+    <p>
+      As solicitações poderão levar até 7 dias úteis para processamento.
+    </p>
+
+    <h3>Dados removidos</h3>
+    <ul>
+      <li>Conta autenticada</li>
+      <li>Dados associados ao usuário</li>
+      <li>Histórico armazenado</li>
+    </ul>
+
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Rafael IA — Todos os direitos reservados.
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const cards = document.querySelectorAll('.card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+
+      tabs.forEach(t => t.classList.remove('active'));
+      cards.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+
+      const target = tab.dataset.tab;
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
+```
